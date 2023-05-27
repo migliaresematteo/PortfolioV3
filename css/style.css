@@ -1,0 +1,620 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden !important;
+}
+html body {
+  min-height: 100vh;
+  background-color: #1b1b1b;
+}
+html body header {
+  height: 100vh;
+  background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 10%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 10%);
+  animation: backgroundExpand 300ms forwards;
+}
+html body header .header-title {
+  color: #fff;
+  white-space: nowrap;
+}
+html body header .header-title::before {
+  content: "Hi!, im";
+  color: #df3a3a;
+  font-weight: 100;
+  display: block;
+}
+html body header .header-subtitle {
+  color: #df3a3a;
+  font-weight: 100;
+}
+html body header .header-cta {
+  display: inline-block;
+  background: #df3a3a;
+  border: solid 2px transparent;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 200ms !important;
+}
+html body header .header-cta:hover {
+  background: transparent;
+  border: solid 2px #df3a3a;
+}
+html body header .header-code-card {
+  min-width: 200px;
+  min-height: 100px;
+  background-color: rgba(27, 27, 27, 0.2862745098);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border: solid 1px #1b1b1b;
+  border-radius: 0.75rem;
+  color: #fff;
+}
+html body header .header-code-card .card-heading {
+  background-color: #1b1b1b;
+  padding: 0.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+html body header .header-code-card .card-heading .dot {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.4rem;
+}
+html body header .header-code-card .card-heading .green {
+  background-color: green;
+}
+html body header .header-code-card .card-heading .yellow {
+  background-color: yellow;
+}
+html body header .header-code-card .card-heading .red {
+  background-color: red;
+}
+html body header .header-code-card .code-card-code {
+  filter: saturate(0.85);
+  padding: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+html body #aboutMe > *, html body #Testimonials > *, html body #services > *, html body #contacts > *, html body #curriculum > * {
+  overflow-x: hidden !important;
+}
+html body #aboutMe {
+  height: 100vh;
+  background: radial-gradient(circle at top left, rgba(122, 50, 119, 0.3294117647), transparent 46%), radial-gradient(circle at bottom right, rgba(226, 38, 38, 0.1568627451), transparent 46%);
+}
+html body #aboutMe .about-title {
+  color: #fff;
+}
+html body #aboutMe .about-title::before {
+  content: "// 01. ";
+  font-family: "Inconsolata", monospace;
+  color: #df3a3a;
+}
+html body #aboutMe .tag {
+  display: inline-block;
+  border-radius: 0.75rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  background: rgba(27, 27, 27, 0.2862745098);
+  color: #fff;
+  border: solid 1px darkgray;
+}
+html body #aboutMe .news {
+  background: #7a3277;
+  font-weight: 700;
+  border: solid 1px #7a3277;
+}
+html body #aboutMe .about-paragraph {
+  color: rgba(255, 255, 255, 0.534);
+}
+html body #aboutMe .progress {
+  height: 0.25rem;
+  background: transparent;
+}
+html body #aboutMe .progress .progress-bar {
+  background: linear-gradient(to right, #df3a3a, #fff 50%, transparent 100%);
+}
+html body #curriculum {
+  height: 100vh;
+  background: radial-gradient(circle at top right, rgba(226, 38, 38, 0.1568627451), transparent 46%), radial-gradient(circle at bottom left, rgba(110, 64, 201, 0.3490196078), transparent 46%);
+}
+html body #curriculum .curriculum-title {
+  color: #fff;
+}
+html body #curriculum .curriculum-title::before {
+  content: "// 02. ";
+  font-family: "Inconsolata", monospace;
+  color: #df3a3a;
+}
+html body #curriculum .curriculum-paragraph {
+  color: rgba(255, 255, 255, 0.534);
+}
+html body #curriculum table, html body #curriculum th, html body #curriculum td {
+  border: solid 1px rgba(169, 169, 169, 0.1);
+}
+html body #curriculum table {
+  color: rgba(255, 255, 255, 0.534);
+  width: 100%;
+  border-collapse: collapse;
+}
+html body #curriculum table td {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+html body #services {
+  height: 100vh;
+  background: radial-gradient(circle at top left, rgba(110, 64, 201, 0.3490196078), transparent 46%), radial-gradient(circle at bottom right, rgba(122, 50, 119, 0.3294117647), transparent 46%);
+}
+html body #services .services-title {
+  color: #fff;
+}
+html body #services .services-title::before {
+  content: "// 03. ";
+  font-family: "Inconsolata", monospace;
+  color: #df3a3a;
+}
+html body #Testimonials {
+  height: 100vh;
+  background: radial-gradient(circle at top right, rgba(122, 50, 119, 0.3294117647), transparent 46%), radial-gradient(circle at bottom left, rgba(226, 38, 38, 0.1568627451), transparent 46%);
+}
+html body #Testimonials .testimonials-title {
+  color: #fff;
+}
+html body #Testimonials .testimonials-title::before {
+  content: "// 04. ";
+  font-family: "Inconsolata", monospace;
+  color: #df3a3a;
+}
+html body #Testimonials .testimonial-paragraph {
+  color: rgba(255, 255, 255, 0.534);
+}
+html body #Testimonials .testimonial-container {
+  border: solid 1px darkgray;
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+}
+html body #Testimonials .testimonial-container .testimonial-image {
+  border-radius: 0.5rem;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html body #Testimonials .testimonial-container .review-container {
+  background: #df3a3a;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+html body #Testimonials .testimonial-container .it-testimonial::after, html body #Testimonials .testimonial-container .uk-testimonial::after {
+  color: #df3a3a;
+  font-weight: 200;
+}
+html body #Testimonials .testimonial-container .it-testimonial::after {
+  content: " [Italy]";
+}
+html body #Testimonials .testimonial-container .uk-testimonial::after {
+  content: " [UK]";
+}
+html body #contacts {
+  height: 100vh;
+  background: radial-gradient(circle at top left, rgba(110, 64, 201, 0.3490196078), transparent 46%), radial-gradient(circle at bottom right, rgba(122, 50, 119, 0.3294117647), transparent 46%);
+}
+html body #contacts .contacts-title {
+  color: #fff;
+}
+html body #contacts .contacts-title::before {
+  content: "// 05. ";
+  font-family: "Inconsolata", monospace;
+  color: #df3a3a;
+}
+html body #contacts .contacts-paragraph {
+  color: rgba(255, 255, 255, 0.534);
+}
+html body #contacts .contact-form-container {
+  border: solid 1px darkgray;
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .header-title::before {
+    font-size: 1rem !important;
+  }
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  .header-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
+  .header-code-card {
+    font-size: 0.7rem;
+  }
+  .abs-c-3 {
+    left: 1rem;
+    bottom: 5%;
+  }
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+  }
+  .tag {
+    padding: 0.2rem 1rem;
+    font-size: 0.6rem;
+  }
+  .langicon {
+    width: 3rem;
+    font-size: 2rem;
+  }
+  table {
+    font-size: 0.5rem;
+  }
+  table thead {
+    display: none;
+  }
+  table td {
+    display: block;
+  }
+  table td:nth-of-type(1) {
+    display: none;
+  }
+  table td::before {
+    content: attr(data-cell) ": ";
+    font-weight: bold;
+  }
+  .testimonial-container {
+    display: block;
+    height: 30VH;
+    width: 100%;
+  }
+  .testimonial-container:nth-of-type(1) {
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-container .testimonial-heading-direction {
+    flex-direction: column;
+  }
+  .testimonial-container .testimonial-heading-direction .testimonial-image {
+    width: 12.5%;
+    margin-bottom: 2.5%;
+  }
+  .testimonial-container .testimonial-heading-direction .it-testimonial, .testimonial-container .testimonial-heading-direction .uk-testimonial {
+    font-size: 0.8rem;
+  }
+  .testimonial-container .testimonial-heading-direction .review-container {
+    font-size: 0.75rem;
+    margin-bottom: 2%;
+  }
+  .testimonial-container .testimonial-text {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container .big-icon {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .header-title {
+    font-size: 3rem;
+  }
+  .header-title::before {
+    font-size: 1.2rem !important;
+  }
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+  .header-cta {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+  }
+  .abs-c-1 {
+    right: 2rem;
+    top: 5%;
+  }
+  .abs-c-2 {
+    right: 4rem;
+    bottom: 3%;
+  }
+  .abs-c-3 {
+    left: 1rem;
+    bottom: 10%;
+  }
+  .tag {
+    padding: 0.2rem 1rem;
+    font-size: 0.7rem;
+  }
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .langicon {
+    width: 3rem;
+    font-size: 1.5rem;
+  }
+  .testimonial-container {
+    display: block;
+    width: 100%;
+    height: 18vh;
+  }
+  .testimonial-container:nth-of-type(1) {
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-container .testimonial-heading-direction {
+    flex-direction: column;
+  }
+  .testimonial-container .testimonial-heading-direction .testimonial-image {
+    width: 12.5%;
+    margin-bottom: 2.5%;
+  }
+  .testimonial-container .testimonial-heading-direction .it-testimonial, .testimonial-container .testimonial-heading-direction .uk-testimonial {
+    font-size: 0.8rem;
+  }
+  .testimonial-container .testimonial-heading-direction .review-container {
+    font-size: 0.75rem;
+    margin-bottom: 2%;
+  }
+  .testimonial-container .testimonial-text {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-title {
+    font-size: 4rem;
+  }
+  .header-title::before {
+    font-size: 1.76rem !important;
+  }
+  .header-cta {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+  }
+  .abs-c-1 {
+    right: 2rem;
+    top: 5%;
+  }
+  .abs-c-2 {
+    right: 4rem;
+    top: 60%;
+  }
+  .abs-c-3 {
+    left: 1rem;
+    bottom: 5%;
+  }
+  .tag {
+    padding: 0.2rem 1rem;
+    font-size: 0.75rem;
+  }
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  .langicon {
+    width: 3.5rem;
+    font-size: 2rem;
+  }
+  .testimonial-container {
+    display: block;
+    width: 50%;
+  }
+  .testimonial-container .testimonial-heading-direction {
+    flex-direction: row;
+  }
+  .testimonial-container .testimonial-heading-direction .testimonial-image {
+    width: 3rem;
+  }
+  .testimonial-container .testimonial-heading-direction .it-testimonial, .testimonial-container .testimonial-heading-direction .uk-testimonial {
+    font-size: 1rem;
+  }
+  .testimonial-container .testimonial-heading-direction .review-container {
+    font-size: 0.75rem;
+  }
+  .testimonial-container .testimonial-text {
+    font-size: 0.75rem;
+    text-align: start;
+  }
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container .big-icon {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-title {
+    font-size: 4rem;
+  }
+  .header-title::before {
+    font-size: 1.9rem !important;
+  }
+  .header-cta {
+    padding: 0.3rem 1.5rem;
+    font-size: 1rem;
+  }
+  .header-code-card {
+    font-size: 0.9rem;
+  }
+  .abs-c-1 {
+    right: 3rem;
+    top: 5%;
+  }
+  .abs-c-2 {
+    right: 4rem;
+    top: 25%;
+  }
+  .abs-c-3 {
+    left: 3rem;
+    bottom: 5%;
+  }
+  .tag {
+    padding: 0.2rem 1rem;
+    font-size: 0.85rem;
+  }
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .langicon {
+    width: 4rem;
+    font-size: 2.5rem;
+  }
+  .testimonial-container {
+    display: block;
+    width: 50%;
+  }
+  .testimonial-container .testimonial-heading-direction {
+    flex-direction: row;
+  }
+  .testimonial-container .testimonial-heading-direction .testimonial-image {
+    width: 3rem;
+  }
+  .testimonial-container .testimonial-heading-direction .it-testimonial, .testimonial-container .testimonial-heading-direction .uk-testimonial {
+    font-size: 0.8rem;
+  }
+  .testimonial-container .testimonial-heading-direction .review-container {
+    font-size: 0.75rem;
+  }
+  .testimonial-container .testimonial-text {
+    font-size: 0.66rem;
+    text-align: start;
+  }
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container .big-icon {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header-title {
+    font-size: 4rem;
+  }
+  .header-title::before {
+    font-size: 2rem !important;
+  }
+  .header-cta {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+  .header-code-card {
+    font-size: 1.1rem;
+  }
+  .abs-c-1 {
+    right: 3rem;
+    top: 5%;
+  }
+  .abs-c-2 {
+    right: 4rem;
+    top: 60%;
+  }
+  .abs-c-3 {
+    left: 3rem;
+    bottom: 5%;
+  }
+  .tag {
+    padding: 0.25rem 1rem;
+  }
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .skill {
+    font-size: 5rem;
+  }
+  .langicon {
+    width: 4.5rem;
+    font-size: 3rem;
+  }
+  .testimonial-container {
+    display: block;
+    width: 50%;
+  }
+  .testimonial-container .testimonial-heading-direction {
+    flex-direction: row;
+  }
+  .testimonial-container .testimonial-heading-direction .testimonial-image {
+    width: 5rem;
+  }
+  .testimonial-container .testimonial-heading-direction .it-testimonial, .testimonial-container .testimonial-heading-direction .uk-testimonial {
+    font-size: 1.5rem;
+  }
+  .testimonial-container .testimonial-heading-direction .review-container {
+    font-size: 1rem;
+  }
+  .testimonial-container .testimonial-text {
+    font-size: 1rem;
+    text-align: start;
+  }
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container .big-icon {
+    font-size: 1.5rem;
+  }
+}
+.tree-icon {
+  background: linear-gradient(#df3a3a, #fff 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  width: 2rem;
+  font-size: 1.75rem;
+  margin: 1rem;
+}
+
+.tree-branch {
+  width: 0.25rem;
+  height: 100%;
+  background: linear-gradient(to bottom, #df3a3a 0, #fff 50%, #df3a3a 100%);
+}
+
+.dynamic {
+  min-height: 100vh;
+}
+
+@keyframes backgroundExpand {
+  10% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 14%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 14%);
+  }
+  20% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 18%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 18%);
+  }
+  30% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 22%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 22%);
+  }
+  40% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 26%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 26%);
+  }
+  60% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 30%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 30%);
+  }
+  70% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 34%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 34%);
+  }
+  80% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 38%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 38%);
+  }
+  90% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 42%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 42%);
+  }
+  100% {
+    background: radial-gradient(circle at top right, rgba(110, 64, 201, 0.3490196078), transparent 46%), radial-gradient(circle at bottom left, rgba(122, 50, 119, 0.3294117647), transparent 46%);
+  }
+}/*# sourceMappingURL=style.css.map */

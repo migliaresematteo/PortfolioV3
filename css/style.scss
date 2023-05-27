@@ -1,0 +1,631 @@
+$title-font: 'Kanit', sans-serif;
+$code-font: 'Inconsolata', monospace;
+$content-font: 'Abel', sans-serif;
+$main-color: #6e40c9;
+$main-color-dimmed: #6e40c959;
+$secondary-color: #7a3277;
+$secondary-color-dimmed: #7a327754;
+$tertiary-color: #df3a3a;
+$tertiary-color-dimmed: #e2262628;
+$neutral-fff: #fff;
+$neutral-fff-dimmed: rgba(255, 255, 255, 0.534);
+$neutral-000: #1b1b1b;
+$neutral-000-dimmed: #1b1b1b49;
+
+//---------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden !important;
+    body {
+        min-height: 100vh;
+        background-color: $neutral-000;
+        header {
+        height: 100vh;
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 10%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 10%);
+        animation: backgroundExpand 300ms forwards;
+        .header-title {
+            color: $neutral-fff;
+            white-space: nowrap;
+            &::before {
+                content: "Hi!, im";
+                color: $tertiary-color;
+                font-weight: 100;
+                display: block;
+            }
+        }
+        .header-subtitle {
+            color: $tertiary-color;
+            font-weight: 100;
+        }
+        .header-cta {
+            display: inline-block;
+            background: $tertiary-color;
+            border: solid 2px transparent;
+            text-decoration: none;
+            color: $neutral-fff;
+            font-weight: 600;
+            transition: 200ms !important;
+            &:hover {
+                background: transparent;
+                border: solid 2px $tertiary-color;
+            }
+        }
+        .header-code-card {
+            min-width: 200px;
+            min-height: 100px;
+            background-color: $neutral-000-dimmed;
+            backdrop-filter: blur(1rem);
+            border: solid 1px $neutral-000;
+            border-radius: .75rem;
+            color: $neutral-fff;
+            .card-heading {
+                background-color: $neutral-000;
+                padding: .5rem;
+                border-radius: .75rem .75rem 0 0;
+                $dot-size: 0.8rem;
+                .dot {
+                    display: block;
+                    width: $dot-size;
+                    height: $dot-size;
+                    border-radius: calc($dot-size / 2);
+                }
+                .green {
+                    background-color: green;
+                }
+                .yellow {
+                    background-color: yellow;
+                }
+                .red {
+                    background-color: red;
+                }
+            }
+            .code-card-code {
+                filter: saturate(0.85);
+                padding: .75rem;
+                line-height: 1.5rem;
+                font-weight: 500;
+            }
+        }
+        }
+        #aboutMe > *,#Testimonials > *,#services > *,#contacts > *,#curriculum > * {
+            overflow-x: hidden !important;
+        }
+        #aboutMe {
+            height: 100vh;
+            background: radial-gradient(circle at top left, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $tertiary-color-dimmed, transparent 46%);
+            .about-title {
+                color: $neutral-fff;
+                &::before {
+                    content: "// 01. ";
+                    font-family: $code-font;
+                    color: $tertiary-color;
+                }
+            }
+            .tag {
+                display: inline-block;
+                border-radius: .75rem;
+                backdrop-filter: blur(1rem);
+                background: $neutral-000-dimmed;
+                color: $neutral-fff;
+                border: solid 1px darkgray;
+            }
+            .news {
+                background: $secondary-color;
+                font-weight: 700;
+                border: solid 1px $secondary-color;
+            }
+            .about-paragraph {
+                color: $neutral-fff-dimmed;
+            }
+            .progress {
+                height: 0.25rem;
+                background: transparent;
+                .progress-bar {
+                    background: linear-gradient(to right, $tertiary-color, $neutral-fff 50%, transparent 100%);
+                }
+            }
+        }
+        #curriculum {
+            height: 100vh;
+            background: radial-gradient(circle at top right, $tertiary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $main-color-dimmed, transparent 46%);
+            .curriculum-title {
+                color: $neutral-fff;
+                &::before {
+                    content: "// 02. ";
+                    font-family: $code-font;
+                    color: $tertiary-color;
+                }
+            }
+            .curriculum-paragraph {
+                color: $neutral-fff-dimmed;
+            }
+            table,th,td {
+                border: solid 1px rgb(169, 169, 169, 0.1);
+            }
+            table {
+                color: $neutral-fff-dimmed;
+                width: 100%;
+                border-collapse: collapse;
+                td {
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                }
+            }
+        }
+        #services {
+            height: 100vh;
+            background: radial-gradient(circle at top left, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $secondary-color-dimmed, transparent 46%);
+            .services-title {
+                color: $neutral-fff;
+                &::before {
+                    content: "// 03. ";
+                    font-family: $code-font;
+                    color: $tertiary-color;
+                }
+            }
+        }
+        #Testimonials {
+            height: 100vh;
+            background: radial-gradient(circle at top right, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $tertiary-color-dimmed, transparent 46%);
+            .testimonials-title {
+                color: $neutral-fff;
+                &::before {
+                    content: "// 04. ";
+                    font-family: $code-font;
+                    color: $tertiary-color;
+                }
+            }
+            .testimonial-paragraph {
+                color: $neutral-fff-dimmed
+            }
+            .testimonial-container {
+                border: solid 1px darkgray;
+                padding: 1rem;
+                backdrop-filter: blur(1rem);
+                border-radius: .5rem;
+                .testimonial-image {
+                    border-radius: .5rem;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                }
+                .review-container {
+                    background: $tertiary-color;
+                    background-clip: text;
+                    color: transparent;
+                }
+                .it-testimonial::after, .uk-testimonial::after {
+                    color: $tertiary-color;
+                    font-weight: 200;
+                }
+                .it-testimonial::after {
+                    content: " [Italy]";
+                }
+                .uk-testimonial::after {
+                    content: " [UK]";
+                }
+            }
+        }
+        #contacts {
+            height: 100vh;
+            background: radial-gradient(circle at top left, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $secondary-color-dimmed, transparent 46%);
+            .contacts-title {
+                color: $neutral-fff;
+                &::before {
+                    content: "// 05. ";
+                    font-family: $code-font;
+                    color: $tertiary-color;
+                }
+            }
+            .contacts-paragraph {
+                color: $neutral-fff-dimmed;
+            }
+            .contact-form-container {
+                border: solid 1px darkgray;
+                padding: 1rem;
+                backdrop-filter: blur(1rem);
+                border-radius: .5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+    .header-title {
+        font-size: 1.8rem;
+        &::before {
+            font-size: 1rem !important;
+        }
+    }
+    .header-subtitle {
+        font-size: 1rem;
+    }
+    .header-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.75rem;
+    }
+    .header-code-card {
+        font-size: 0.7rem;
+    }
+    .abs-c-3 {
+        left: 1rem;
+        bottom: 5%;
+    }
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+    }
+    .tag {
+        padding: 0.2rem 1rem;
+        font-size: 0.6rem;
+    }
+    .langicon {
+        width: 3rem;
+        font-size: 2rem;
+    }
+    table {
+        font-size: 0.5rem;
+        thead {
+            display: none;
+        }
+        td {
+            display: block;
+            &:nth-of-type(1) {
+                display: none;
+            }
+            &::before {
+                content: attr(data-cell) ": ";
+                font-weight: bold;
+            }
+        }
+    }
+    .testimonial-container {
+        display: block;
+        height: 30VH;
+        width: 100%;
+        &:nth-of-type(1) {
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-heading-direction {
+            flex-direction: column;
+            .testimonial-image {
+                width: 12.5%;
+                margin-bottom: 2.5%;
+            }
+            .it-testimonial, .uk-testimonial {
+                font-size: 0.8rem;
+            }
+            .review-container {
+                font-size: 0.75rem;
+                margin-bottom: 2%;
+            }
+        }
+        .testimonial-text {
+            font-size: 0.5rem;
+            text-align: center;
+        }
+    }
+    .contact-form-container {
+        width: 100%;
+        .big-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-title {
+        font-size: 3rem;
+        &::before {
+            font-size: 1.2rem !important;
+        }
+    }
+    .header-subtitle {
+        font-size: 1.2rem;
+    }
+    .header-cta {
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+    }
+    .abs-c-1 {
+        right: 2rem;
+        top: 5%;
+    }
+    .abs-c-2 {
+        right: 4rem;
+        bottom: 3%;
+    }
+    .abs-c-3 {
+        left: 1rem;
+        bottom: 10%;
+    }
+    .tag {
+        padding: 0.2rem 1rem;
+        font-size: 0.7rem;
+    }
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .langicon {
+        width: 3rem;
+        font-size: 1.5rem;
+    }
+    .testimonial-container {
+        display: block;
+        width: 100%;
+        height: 18vh;
+        &:nth-of-type(1) {
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-heading-direction {
+            flex-direction: column;
+            .testimonial-image {
+                width: 12.5%;
+                margin-bottom: 2.5%;
+            }
+            .it-testimonial, .uk-testimonial {
+                font-size: 0.8rem;
+            }
+            .review-container {
+                font-size: 0.75rem;
+                margin-bottom: 2%;
+            }
+        }
+        .testimonial-text {
+            font-size: 0.6rem;
+            text-align: center;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-title {
+        font-size: 4rem;
+        &::before {
+            font-size: 1.76rem !important;
+        }
+    }
+    .header-cta {
+        padding: 0.5rem 1.25rem;
+        font-size: 1rem;
+    }
+    .abs-c-1 {
+        right: 2rem;
+        top: 5%;
+    }
+    .abs-c-2 {
+        right: 4rem;
+        top: 60%;
+    }
+    .abs-c-3 {
+        left: 1rem;
+        bottom: 5%;
+    }
+    .tag {
+        padding: 0.2rem 1rem;
+        font-size: 0.75rem;
+    }
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+    .langicon {
+        width: 3.5rem;
+        font-size: 2rem;
+    }
+    .testimonial-container {
+        display: block;
+        width: 50%;
+        .testimonial-heading-direction {
+            flex-direction: row;
+            .testimonial-image {
+                width: 3rem;
+            }
+            .it-testimonial, .uk-testimonial {
+                font-size: 1rem;
+            }
+            .review-container {
+                font-size: 0.75rem;
+            }
+        }
+        .testimonial-text {
+            font-size: 0.75rem;
+            text-align: start;
+        }
+    }
+    .contact-form-container {
+        width: 100%;
+        .big-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-title {
+        font-size: 4rem;
+        &::before {
+            font-size: 1.9rem !important;
+        }
+    }
+    .header-cta {
+        padding: 0.3rem 1.5rem;
+        font-size: 1rem;
+    }
+    .header-code-card {
+        font-size: 0.9rem;
+    }
+    .abs-c-1 {
+        right: 3rem;
+        top: 5%;
+    }
+    .abs-c-2 {
+        right: 4rem;
+        top: 25%;
+    }
+    .abs-c-3 {
+        left: 3rem;
+        bottom: 5%;
+    }
+    .tag {
+        padding: 0.2rem 1rem;
+        font-size: 0.85rem;
+    }
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .langicon {
+        width: 4rem;
+        font-size: 2.5rem;
+    }
+    .testimonial-container {
+        display: block;
+        width: 50%;
+        .testimonial-heading-direction {
+            flex-direction: row;
+            .testimonial-image {
+                width: 3rem;
+            }
+            .it-testimonial, .uk-testimonial {
+                font-size: 0.8rem;
+            }
+            .review-container {
+                font-size: 0.75rem;
+            }
+        }
+        .testimonial-text {
+            font-size: 0.66rem;
+            text-align: start;
+        }
+    }
+    .contact-form-container {
+        width: 100%;
+        .big-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .header-title {
+        font-size: 4rem;
+        &::before {
+            font-size: 2rem !important;
+        }
+    }
+    .header-cta {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+    .header-code-card {
+        font-size: 1.1rem;
+    }
+    .abs-c-1 {
+        right: 3rem;
+        top: 5%;
+    }
+    .abs-c-2 {
+        right: 4rem;
+        top: 60%;
+    }
+    .abs-c-3 {
+        left: 3rem;
+        bottom: 5%;
+    }
+    .tag {
+        padding: 0.25rem 1rem;
+    }
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .skill {
+        font-size: 5rem;
+    }
+    .langicon {
+        width: 4.5rem;
+        font-size: 3rem;
+    }
+    .testimonial-container {
+        display: block;
+        width: 50%;
+        .testimonial-heading-direction {
+            flex-direction: row;
+            .testimonial-image {
+                width: 5rem;
+            }
+            .it-testimonial, .uk-testimonial {
+                font-size: 1.5rem;
+            }
+            .review-container {
+                font-size: 1rem;
+            }
+        }
+        .testimonial-text {
+            font-size: 1rem;
+            text-align: start;
+        }
+    }
+    .contact-form-container {
+        width: 100%;
+        .big-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.tree-icon {
+    background: linear-gradient($tertiary-color, $neutral-fff 100%);
+    background-clip: text;
+    color: transparent;
+    width: 2rem;
+    font-size: 1.75rem;
+    margin: 1rem;
+}
+
+.tree-branch {
+    width: 0.25rem;
+    height: 100%;
+    background: linear-gradient(to bottom, $tertiary-color 0, $neutral-fff 50%, $tertiary-color 100%);
+}
+
+.dynamic {
+    min-height: 100vh;
+}
+
+@keyframes backgroundExpand {
+    10% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 14%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 14%);  
+    }
+    20% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 18%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 18%);  
+    }
+    30% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 22%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 22%);  
+    }
+    40% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 26%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 26%);  
+    }
+    60% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 30%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 30%);  
+    }
+    70% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 34%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 34%);  
+    }
+    80% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 38%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 38%);  
+    }
+    90% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 42%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 42%);  
+    }
+    100% {
+        background: radial-gradient(circle at top right, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $secondary-color-dimmed, transparent 46%);  
+    }
+}
