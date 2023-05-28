@@ -8,7 +8,7 @@ $secondary-color-dimmed: #7a327754;
 $tertiary-color: #df3a3a;
 $tertiary-color-dimmed: #e2262628;
 $neutral-fff: #fff;
-$neutral-fff-dimmed: rgba(255, 255, 255, 0.534);
+$neutral-fff-dimmed: #ffffff88;
 $neutral-000: #1b1b1b;
 $neutral-000-dimmed: #1b1b1b49;
 
@@ -151,7 +151,8 @@ html {
                 color: $neutral-fff-dimmed;
             }
             table,th,td {
-                border: solid 1px rgb(169, 169, 169, 0.1);
+                border: solid 1px #a9a9a91a;
+                height: max-content;
             }
             table {
                 color: $neutral-fff-dimmed;
@@ -171,6 +172,29 @@ html {
                     content: "// 03. ";
                     font-family: $code-font;
                     color: $tertiary-color;
+                }
+            }
+            .services-paragraph {
+                color: $neutral-fff-dimmed;
+            }
+            .service-card {
+                border: solid 1px #a9a9a91a;
+                display: inline-block;
+                .service-card-title,.service-card-paragraph {
+                    color: $neutral-fff-dimmed;
+                }
+                .service-cta {
+                    display: inline-block;
+                    background: $tertiary-color;
+                    border: solid 2px transparent;
+                    text-decoration: none;
+                    color: $neutral-fff;
+                    font-weight: 600;
+                    transition: 200ms !important;
+                    &:hover {
+                        background: transparent;
+                        border: solid 2px $tertiary-color;
+                    }
                 }
             }
         }
@@ -217,11 +241,11 @@ html {
         }
         #contacts {
             height: 100vh;
-            background: radial-gradient(circle at top left, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $secondary-color-dimmed, transparent 46%);
+            background: radial-gradient(circle at top right, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $tertiary-color-dimmed, transparent 46%);
             .contacts-title {
                 color: $neutral-fff;
                 &::before {
-                    content: "// 05. ";
+                    content: "// 04. ";
                     font-family: $code-font;
                     color: $tertiary-color;
                 }
@@ -239,6 +263,11 @@ html {
     }
 }
 
+@media (width < 768px) {
+    .service-cta {
+        width: 100%;
+    }
+}
 @media (min-width: 0px) and (max-width: 575px) {
     .header-title {
         font-size: 1.8rem;
@@ -253,6 +282,13 @@ html {
         padding: 0.3rem 1rem;
         font-size: 0.75rem;
     }
+    .service-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.5rem;  
+    }
+    .service-card-title {
+        font-size: 0.8rem;
+    }
     .header-code-card {
         font-size: 0.7rem;
     }
@@ -260,7 +296,7 @@ html {
         left: 1rem;
         bottom: 5%;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
         font-size: 0.6rem;
         line-height: 1.2rem;
     }
@@ -335,6 +371,10 @@ html {
         padding: 0.3rem 1rem;
         font-size: 1rem;
     }
+    .service-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.75rem;  
+    }
     .abs-c-1 {
         right: 2rem;
         top: 5%;
@@ -351,7 +391,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.7rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
         font-size: 0.8rem;
         line-height: 1.5rem;
     }
@@ -397,6 +437,10 @@ html {
         padding: 0.5rem 1.25rem;
         font-size: 1rem;
     }
+    .service-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.75rem;  
+    }
     .abs-c-1 {
         right: 2rem;
         top: 5%;
@@ -413,7 +457,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.75rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
         font-size: 0.9rem;
         line-height: 1.6rem;
     }
@@ -459,6 +503,10 @@ html {
         padding: 0.3rem 1.5rem;
         font-size: 1rem;
     }
+    .service-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.75rem;  
+    }
     .header-code-card {
         font-size: 0.9rem;
     }
@@ -478,7 +526,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.85rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
         font-size: 1rem;
         line-height: 2rem;
     }
@@ -524,6 +572,10 @@ html {
         padding: 0.5rem 2rem;
         font-size: 1rem;
     }
+    .service-cta {
+        padding: 0.3rem 1rem;
+        font-size: 0.75rem;  
+    }
     .header-code-card {
         font-size: 1.1rem;
     }
@@ -542,7 +594,7 @@ html {
     .tag {
         padding: 0.25rem 1rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
         font-size: 1rem;
         line-height: 2rem;
     }

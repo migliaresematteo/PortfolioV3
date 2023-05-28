@@ -114,7 +114,7 @@ html body #aboutMe .news {
   border: solid 1px #7a3277;
 }
 html body #aboutMe .about-paragraph {
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.5333333333);
 }
 html body #aboutMe .progress {
   height: 0.25rem;
@@ -136,13 +136,15 @@ html body #curriculum .curriculum-title::before {
   color: #df3a3a;
 }
 html body #curriculum .curriculum-paragraph {
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.5333333333);
 }
 html body #curriculum table, html body #curriculum th, html body #curriculum td {
-  border: solid 1px rgba(169, 169, 169, 0.1);
+  border: solid 1px rgba(169, 169, 169, 0.1019607843);
+  height: -moz-max-content;
+  height: max-content;
 }
 html body #curriculum table {
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.5333333333);
   width: 100%;
   border-collapse: collapse;
 }
@@ -161,6 +163,29 @@ html body #services .services-title::before {
   font-family: "Inconsolata", monospace;
   color: #df3a3a;
 }
+html body #services .services-paragraph {
+  color: rgba(255, 255, 255, 0.5333333333);
+}
+html body #services .service-card {
+  border: solid 1px rgba(169, 169, 169, 0.1019607843);
+  display: inline-block;
+}
+html body #services .service-card .service-card-title, html body #services .service-card .service-card-paragraph {
+  color: rgba(255, 255, 255, 0.5333333333);
+}
+html body #services .service-card .service-cta {
+  display: inline-block;
+  background: #df3a3a;
+  border: solid 2px transparent;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 200ms !important;
+}
+html body #services .service-card .service-cta:hover {
+  background: transparent;
+  border: solid 2px #df3a3a;
+}
 html body #Testimonials {
   height: 100vh;
   background: radial-gradient(circle at top right, rgba(122, 50, 119, 0.3294117647), transparent 46%), radial-gradient(circle at bottom left, rgba(226, 38, 38, 0.1568627451), transparent 46%);
@@ -174,7 +199,7 @@ html body #Testimonials .testimonials-title::before {
   color: #df3a3a;
 }
 html body #Testimonials .testimonial-paragraph {
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.5333333333);
 }
 html body #Testimonials .testimonial-container {
   border: solid 1px darkgray;
@@ -207,18 +232,18 @@ html body #Testimonials .testimonial-container .uk-testimonial::after {
 }
 html body #contacts {
   height: 100vh;
-  background: radial-gradient(circle at top left, rgba(110, 64, 201, 0.3490196078), transparent 46%), radial-gradient(circle at bottom right, rgba(122, 50, 119, 0.3294117647), transparent 46%);
+  background: radial-gradient(circle at top right, rgba(122, 50, 119, 0.3294117647), transparent 46%), radial-gradient(circle at bottom left, rgba(226, 38, 38, 0.1568627451), transparent 46%);
 }
 html body #contacts .contacts-title {
   color: #fff;
 }
 html body #contacts .contacts-title::before {
-  content: "// 05. ";
+  content: "// 04. ";
   font-family: "Inconsolata", monospace;
   color: #df3a3a;
 }
 html body #contacts .contacts-paragraph {
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.5333333333);
 }
 html body #contacts .contact-form-container {
   border: solid 1px darkgray;
@@ -228,6 +253,11 @@ html body #contacts .contact-form-container {
   border-radius: 0.5rem;
 }
 
+@media (width < 768px) {
+  .service-cta {
+    width: 100%;
+  }
+}
 @media (min-width: 0px) and (max-width: 575px) {
   .header-title {
     font-size: 1.8rem;
@@ -242,6 +272,13 @@ html body #contacts .contact-form-container {
     padding: 0.3rem 1rem;
     font-size: 0.75rem;
   }
+  .service-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.5rem;
+  }
+  .service-card-title {
+    font-size: 0.8rem;
+  }
   .header-code-card {
     font-size: 0.7rem;
   }
@@ -249,7 +286,7 @@ html body #contacts .contact-form-container {
     left: 1rem;
     bottom: 5%;
   }
-  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph {
     font-size: 0.6rem;
     line-height: 1.2rem;
   }
@@ -324,6 +361,10 @@ html body #contacts .contact-form-container {
     padding: 0.3rem 1rem;
     font-size: 1rem;
   }
+  .service-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
   .abs-c-1 {
     right: 2rem;
     top: 5%;
@@ -340,7 +381,7 @@ html body #contacts .contact-form-container {
     padding: 0.2rem 1rem;
     font-size: 0.7rem;
   }
-  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph {
     font-size: 0.8rem;
     line-height: 1.5rem;
   }
@@ -386,6 +427,10 @@ html body #contacts .contact-form-container {
     padding: 0.5rem 1.25rem;
     font-size: 1rem;
   }
+  .service-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
   .abs-c-1 {
     right: 2rem;
     top: 5%;
@@ -402,7 +447,7 @@ html body #contacts .contact-form-container {
     padding: 0.2rem 1rem;
     font-size: 0.75rem;
   }
-  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph {
     font-size: 0.9rem;
     line-height: 1.6rem;
   }
@@ -448,6 +493,10 @@ html body #contacts .contact-form-container {
     padding: 0.3rem 1.5rem;
     font-size: 1rem;
   }
+  .service-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
   .header-code-card {
     font-size: 0.9rem;
   }
@@ -467,7 +516,7 @@ html body #contacts .contact-form-container {
     padding: 0.2rem 1rem;
     font-size: 0.85rem;
   }
-  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph {
     font-size: 1rem;
     line-height: 2rem;
   }
@@ -513,6 +562,10 @@ html body #contacts .contact-form-container {
     padding: 0.5rem 2rem;
     font-size: 1rem;
   }
+  .service-cta {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
   .header-code-card {
     font-size: 1.1rem;
   }
@@ -531,7 +584,7 @@ html body #contacts .contact-form-container {
   .tag {
     padding: 0.25rem 1rem;
   }
-  .about-paragraph, .curriculum-paragraph, .contacts-paragraph {
+  .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph {
     font-size: 1rem;
     line-height: 2rem;
   }
