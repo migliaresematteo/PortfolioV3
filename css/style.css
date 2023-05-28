@@ -168,7 +168,6 @@ html body #services .services-paragraph {
 }
 html body #services .service-card {
   border: solid 1px rgba(169, 169, 169, 0.1019607843);
-  display: inline-block;
 }
 html body #services .service-card .service-card-title, html body #services .service-card .service-card-paragraph {
   color: rgba(255, 255, 255, 0.5333333333);
