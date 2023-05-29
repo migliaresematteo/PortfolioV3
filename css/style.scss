@@ -636,9 +636,12 @@ html {
     background: linear-gradient($tertiary-color, $neutral-fff 100%);
     background-clip: text;
     color: transparent;
-    width: 2rem;
     font-size: 1.75rem;
     margin: 1rem;
+    @media (width < 768px) {
+        margin: 1rem 0rem;
+        font-size: 1.275rem;
+    }
 }
 
 .tree-branch {
