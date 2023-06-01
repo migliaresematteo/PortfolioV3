@@ -101,13 +101,11 @@ html {
         #aboutMe > *,#Testimonials > *,#services > *,#contacts > *,#curriculum > * {
             overflow-x: hidden !important;
         }
-        #aboutMe {
-            height: 100vh;
-            background: radial-gradient(circle at top left, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $tertiary-color-dimmed, transparent 46%);
+        #aboutMe,#aboutMe1 {
             .about-title {
                 color: $neutral-fff;
                 &::before {
-                    content: "// 01. ";
+                    content: "// 01.1 ";
                     font-family: $code-font;
                     color: $tertiary-color;
                 }
@@ -128,6 +126,10 @@ html {
             .about-paragraph {
                 color: $neutral-fff-dimmed;
             }
+        }
+        #aboutMe {
+            height: 100vh;
+            background: radial-gradient(circle at top left, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $tertiary-color-dimmed, transparent 46%);
             .progress {
                 height: 0.25rem;
                 background: transparent;
@@ -136,9 +138,30 @@ html {
                 }
             }
         }
-        #curriculum {
+        #aboutMe1 {
             height: 100vh;
             background: radial-gradient(circle at top right, $tertiary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $main-color-dimmed, transparent 46%);
+            .musescore-card {
+                border: solid 1px #a9a9a91a;
+                color: $neutral-fff-dimmed;
+                .info {
+                    h2 {
+                        color: $neutral-fff;
+                    }
+                    img {
+                        width: 10rem;
+                        aspect-ratio: 1/1 !important;
+                        object-fit: cover !important;
+                    }
+                }
+                .music {
+                    border: solid 1px #a9a9a91a;  
+                }
+            }
+        }
+        #curriculum {
+            height: 100vh;
+            background: radial-gradient(circle at top left, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $secondary-color-dimmed, transparent 46%);
             .curriculum-title {
                 color: $neutral-fff;
                 &::before {
@@ -165,7 +188,7 @@ html {
         }
         #services {
             height: 100vh;
-            background: radial-gradient(circle at top left, $main-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $secondary-color-dimmed, transparent 46%);
+            background: radial-gradient(circle at top right, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $tertiary-color-dimmed, transparent 46%);
             .services-title {
                 color: $neutral-fff;
                 &::before {
@@ -240,7 +263,7 @@ html {
         }
         #contacts {
             height: 100vh;
-            background: radial-gradient(circle at top right, $secondary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $tertiary-color-dimmed, transparent 46%);
+            background: radial-gradient(circle at top left, $tertiary-color-dimmed, transparent 46%), radial-gradient(circle at bottom right, $main-color-dimmed, transparent 46%);
             .contacts-title {
                 color: $neutral-fff;
                 &::before {
@@ -295,8 +318,8 @@ html {
         left: 1rem;
         bottom: 5%;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
-        font-size: 0.6rem;
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph,.services-paragraph {
+        font-size: 0.75rem;
         line-height: 1.2rem;
     }
     .tag {
@@ -390,7 +413,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.7rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph,.services-paragraph {
         font-size: 0.8rem;
         line-height: 1.5rem;
     }
@@ -456,7 +479,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.75rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph,.services-paragraph {
         font-size: 0.9rem;
         line-height: 1.6rem;
     }
@@ -525,7 +548,7 @@ html {
         padding: 0.2rem 1rem;
         font-size: 0.85rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph,.services-paragraph {
         font-size: 1rem;
         line-height: 2rem;
     }
@@ -593,7 +616,7 @@ html {
     .tag {
         padding: 0.25rem 1rem;
     }
-    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph {
+    .about-paragraph,.curriculum-paragraph,.contacts-paragraph,.service-card-paragraph,.services-paragraph {
         font-size: 1rem;
         line-height: 2rem;
     }
@@ -637,6 +660,7 @@ html {
     background-clip: text;
     color: transparent;
     font-size: 1.75rem;
+    width: 1.75rem;
     margin: 1rem;
     @media (width < 768px) {
         margin: 1rem 0rem;
@@ -652,6 +676,14 @@ html {
 
 .dynamic {
     min-height: 100vh;
+}
+
+.justify-content-str {
+    justify-content: stretch;
+}
+
+.align-between {
+    align-content: space-between;
 }
 
 @keyframes backgroundExpand {
