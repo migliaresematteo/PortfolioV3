@@ -293,8 +293,8 @@ html body #contacts .contact-form-container {
     bottom: 5%;
   }
   .about-paragraph, .curriculum-paragraph, .contacts-paragraph, .service-card-paragraph, .services-paragraph {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
   }
   .tag {
     padding: 0.2rem 1rem;
