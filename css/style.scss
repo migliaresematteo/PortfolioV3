@@ -141,22 +141,8 @@ html {
         #aboutMe1 {
             height: 100vh;
             background: radial-gradient(circle at top right, $tertiary-color-dimmed, transparent 46%), radial-gradient(circle at bottom left, $main-color-dimmed, transparent 46%);
-            .musescore-card {
-                border: solid 1px #a9a9a91a;
-                color: $neutral-fff-dimmed;
-                .info {
-                    h2 {
-                        color: $neutral-fff;
-                    }
-                    img {
-                        width: 10rem;
-                        aspect-ratio: 1/1 !important;
-                        object-fit: cover !important;
-                    }
-                }
-                .music {
-                    border: solid 1px #a9a9a91a;  
-                }
+            .youtube-em {
+                border-radius: 1rem;
             }
         }
         #curriculum {
@@ -684,6 +670,12 @@ html {
 
 .align-between {
     align-content: space-between;
+}
+
+.accent {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: $tertiary-color;
 }
 
 @keyframes backgroundExpand {
